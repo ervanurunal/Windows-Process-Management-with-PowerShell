@@ -1,5 +1,7 @@
 ## Windows Process Management with PowerShell
 
+---
+
 ### Overwiev
 
 In this lab, I practiced **monitoring and managing Windows processes** using Windows PowerShell.
@@ -30,13 +32,14 @@ Process management is an important IT Support skill because excessive or malfunc
 ### **Lab Type:** 
 Windows / IT Support Hands-On Lab
 
-----
+---
+---
 
-## 1. Open Windows PowerShell as Administrator
+### 1. Open Windows PowerShell as Administrator
 
 Process termination requires administrative privileges in this lab.
 
-### Steps
+#### Steps
 
 1. Open the **Start Menu**.
 2. Search for **Windows PowerShell**.
@@ -48,7 +51,7 @@ Process termination requires administrative privileges in this lab.
 
 ---
 
-## 2. Find a Specific Process
+### 2. Find a Specific Process
 
 Use the PowerShell `Get-Process` cmdlet to search for a process by name.
 
@@ -71,7 +74,7 @@ totally_not_malicious
 
 ---
 
-## 3. Understand Process IDs
+### 3. Understand Process IDs
 
 A **Process ID (PID)** is a unique number assigned to a running process by Windows.
 
@@ -86,7 +89,7 @@ The PID allows Windows commands to identify a specific running process.
 
 ---
 
-## 4. Terminate a Specific Process
+### 4. Terminate a Specific Process
 
 The `taskkill` command can terminate a process using its PID.
 
@@ -96,7 +99,7 @@ taskkill /F /PID [PROCESS ID]
 
 ![3](https://i.imgur.com/Q24Elel.png)
 
-### *Command Breakdown*
+#### *Command Breakdown*
 
 | Option     | Meaning                         |
 | ---------- | ------------------------------- |
@@ -108,7 +111,7 @@ taskkill /F /PID [PROCESS ID]
 
 ---
 
-## 5. Verify the Process Was Terminated
+### 5. Verify the Process Was Terminated
 
 Run the search again:
 
@@ -122,7 +125,7 @@ Because the process has been terminated, PowerShell should report that no proces
 
 ---
 
-## 6. Search for Multiple Processes
+### 6. Search for Multiple Processes
 
 The lab also contains processes with the word:
 
@@ -147,7 +150,7 @@ because `Get-Process -Name` normally searches for the specified process name.
 
 ---
 
-## 7. Use a Wildcard to Find Partial Matches
+### 7. Use a Wildcard to Find Partial Matches
 
 A wildcard allows us to search for processes containing a specific word.
 
@@ -161,7 +164,7 @@ Get-Process -Name "*razzle*"
 
 ---
 
-## 8. Identify the PIDs
+### 8. Identify the PIDs
 
 The command:
 
@@ -175,7 +178,7 @@ should display the processes containing `razzle`.
 
 ---
 
-## 9. Terminate the First Process
+### 9. Terminate the First Process
 
 Use `taskkill` with the first PID:
 
@@ -187,7 +190,7 @@ taskkill /F /PID [PROCESS ID]
 
 ---
 
-## 10. Terminate the Second Process
+### 10. Terminate the Second Process
 
 Use `taskkill` again with the second PID:
 
@@ -199,7 +202,7 @@ taskkill /F /PID [PROCESS ID]
 
 ---
 
-## 11. Verify Multiple Processes Were Terminated
+### 11. Verify Multiple Processes Were Terminated
 
 Run:
 
@@ -214,6 +217,7 @@ This confirms that the processes containing `razzle` are no longer running.
 ![6](https://i.imgur.com/O4LzUP4.png)
 
 ---
+---
 
 ### Commands Learned
 
@@ -227,6 +231,7 @@ This confirms that the processes containing `razzle` are no longer running.
 | `*`                          | Wildcard for matching characters   |
 | `Id`                         | Process ID (PID)                   |
 
+---
 ---
 
 ### Key Concepts
@@ -260,6 +265,7 @@ The `*` character is a wildcard.
 `taskkill` is a Windows command-line utility used to terminate processes.
 
 ---
+---
 
 ### Cybersecurity Relevance
 
@@ -287,6 +293,7 @@ For example, a SOC Analyst may investigate an unfamiliar process by checking its
 
 Understanding Windows processes provides an important foundation for security monitoring and incident response.
 
+---
 ---
 
 ### Troubleshooting Notes
@@ -436,6 +443,7 @@ Process no longer exists
 * Malware investigation fundamentals
 * Incident-response fundamentals
 
+---
 ---
 
 ### Final Takeaway
