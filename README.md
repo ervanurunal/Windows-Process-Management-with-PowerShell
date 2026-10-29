@@ -2,7 +2,7 @@
 
 ---
 
-### Overwiev
+### Overview
 
 In this lab, I practiced **monitoring and managing Windows processes** using Windows PowerShell.
 
